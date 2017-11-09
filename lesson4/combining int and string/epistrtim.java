@@ -66,11 +66,11 @@ public  int epistinr( String f, Scanner reader ){
         } 
         catch (InputMismatchException ime) {
         System.out.println("ebales lathos");
+        
+        if(reader.hasNext()){
+        reader.next();
         }
-       // if(reader.hasNext()){
-        //reader.next();
-        //}
-   
+        }
    
                     
 }
