@@ -23,6 +23,15 @@ public class Epistrofitim {
                     float timi =0;
                     while(true)
                     {
+                        
+                        
+    //int arr1= new int;
+    //int arr2[]= new int;
+    //int arr3[]= new int[];
+    //int arr4[10]= new int[];
+    //int arr5[10]= new int[];
+    //int arr6[]= new int[10];//sosto
+    //int []arr7= new int[10];//sosto
 
                         try {  // System.out.print(f);
                         timi = reader.nextFloat();
