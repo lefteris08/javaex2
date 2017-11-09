@@ -35,7 +35,7 @@ public class Askisi2 {
         arithmos3=epistinr( f2, reader );
         while(arithmos2+arithmos1>arithmos3){
              System.out.println("o arithmos  pou edwses den einai megaliteros apo ton 1 kai 2 ");
-             arithmos2=epistinr( f1, reader );
+             arithmos3=epistinr( f2, reader );
         } 
         
         System.out.println("oi 3 arithmoi einai \n"+arithmos1+"\n"+arithmos2+"\n"+arithmos3);
