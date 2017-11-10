@@ -5,6 +5,9 @@
  */
 package dokimastikopj;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 /**
  *
  * @author lefte
@@ -16,9 +19,13 @@ public class Dokimastikopj {
      */
     public static void main(String[] args) {
         int dk1,dk2,dk3;// here we define the sizes of the 3dimensonal array
-        dk1=9;//arxika 7
-        dk2=5;//arxika 3
-        dk3=2;//arxika 5
+       // dk1=9;//arxika 7
+        //dk2=5;//arxika 3
+        //dk3=2;//arxika 5
+        Scanner rd=new Scanner(System.in);//here we give the user the chanche to give us the dimencions of the array
+        dk1=returnInt("bale tin 1 diastasi",rd);
+        dk2=returnInt("bale tin 2 diastasi",rd);
+        dk3=returnInt("bale tin 3 diastasi",rd);
            int [][][]pinakas=new int [dk1][dk2][dk3]; //First we are creating a new 3d 7,3,5 array
            int []sum_from_3rd=new int[dk3];//here we will store te summ for the 3rd dimmension
            int []sum_from_row=new int[dk2];//here we will store the summ for the second dimension
@@ -179,5 +186,38 @@ public class Dokimastikopj {
          System.out.println("the total sum is "+totalsum+"");
          
             }
+    
+    //here we make a code that check  if the user give us a int >0
+    public static int returnInt( String f, Scanner reader ){
+                    int timi =-1;
+                    while(timi<=0)
+                    {
+                         timi =-1;
+                        try {   
+                        System.out.println(f);
+                        timi = reader.nextInt();
+                        //break;
+
+
+
+
+                        } 
+                        catch (InputMismatchException ime) {
+                        System.out.println("you dint put a legal value");
+                        if(reader.hasNext()){
+                        reader.next();
+                        }
+                        }
+
+
+
+
+                }
+                return(timi);
+
+                }
+    
+    
+    
     
 }
