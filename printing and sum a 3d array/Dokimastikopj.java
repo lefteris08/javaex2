@@ -15,10 +15,14 @@ public class Dokimastikopj {
      * @param args the command line argumentsint totalsum=0;
      */
     public static void main(String[] args) {
-           int [][][]pinakas=new int [7][3][5]; //First we are creating a new 3d 7,3,5 array
-           int []sum_from_3rd=new int[5];//here we will store te summ for the 3rd dimmension
-           int []sum_from_row=new int[3];//here we will store the summ for the second dimension
-           int []sum_from_line=new int[7];//here we will store the elements for the first dimension
+        int dk1,dk2,dk3;// here we define the sizes of the 3dimensonal array
+        dk1=9;//arxika 7
+        dk2=5;//arxika 3
+        dk3=2;//arxika 5
+           int [][][]pinakas=new int [dk1][dk2][dk3]; //First we are creating a new 3d 7,3,5 array
+           int []sum_from_3rd=new int[dk3];//here we will store te summ for the 3rd dimmension
+           int []sum_from_row=new int[dk2];//here we will store the summ for the second dimension
+           int []sum_from_line=new int[dk1];//here we will store the elements for the first dimension
            int totalsum=0;
            
            
@@ -40,11 +44,18 @@ public class Dokimastikopj {
                     
                
                }
-               System.out.println("");
+              // System.out.println("");
            }
-           System.out.println("");
+//           System.out.println("");
         }
 
+           /*
+        dk1=7;
+        dk2=3;
+        dk3=5;/*/
+           
+           
+           
            
            System.out.println("_________________________________");
            System.out.println("_________________________________");
@@ -55,11 +66,11 @@ public class Dokimastikopj {
            //here we are showning the array with the dimension we want and 
            // summ its elements to see the value on this level
            
-        for(int triti=0; triti<5;triti++)
+        for(int triti=0; triti<dk3;triti++)
         {
-           for(int grammes=0; grammes<7;grammes++)
+           for(int grammes=0; grammes<dk1;grammes++)
            {    
-               for(int stiles=0; stiles<3;stiles++)//int grammes=0; grammes<7;grammes++)
+               for(int stiles=0; stiles<dk2;stiles++)//int grammes=0; grammes<7;grammes++)
                 {
                    // pinakas[grammes][stiles][triti]=grammes+stiles+triti;
                    // System.out.print("grammi "+grammes+"  kai stili "+stiles+" kai tin triti diastasi "+triti+"   [ "+pinakas[grammes][stiles][triti]+"]");
@@ -75,8 +86,10 @@ public class Dokimastikopj {
         }
 
          System.out.println("the summ in the third dimmension is : ");
-         //
-         for(int y=0;y<5;y++){
+        
+         
+//
+         for(int y=0;y<dk3;y++){
          
          System.out.println("the  "+y+" level has sum  "+sum_from_3rd[y]);
                 totalsum= totalsum+sum_from_3rd[y];
@@ -89,11 +102,18 @@ public class Dokimastikopj {
            System.out.println("_________________________________");
            
         
-        for(int stiles=0; stiles<3;stiles++)
+           /*
+        dk1=7;
+        dk2=3;
+        dk3=5;/*/
+       
+           
+           
+        for(int stiles=0; stiles<dk2;stiles++)
         {
-           for(int grammes=0; grammes<7;grammes++)
+           for(int grammes=0; grammes<dk1;grammes++)
            {    
-               for(int triti=0; triti<5;triti++)//int grammes=0; grammes<7;grammes++)
+               for(int triti=0; triti<dk3;triti++)//int grammes=0; grammes<7;grammes++)
                 {
                    // pinakas[grammes][stiles][triti]=grammes+stiles+triti;
                    // System.out.print("grammi "+grammes+"  kai stili "+stiles+" kai tin triti diastasi "+triti+"   [ "+pinakas[grammes][stiles][triti]+"]");
@@ -110,7 +130,7 @@ public class Dokimastikopj {
          System.out.println("the sum based on the second dimmension ");
          totalsum=0;
          
-         for(int y=0;y<3;y++){
+         for(int y=0;y<dk2;y++){
          totalsum=totalsum+sum_from_row[y];
          
          System.out.println("the "+y+" level has sum "+sum_from_row[y]);
@@ -126,12 +146,15 @@ public class Dokimastikopj {
            System.out.println("_________________________________");
            System.out.println("_________________________________");
            
-        
-        for(int grammes=0; grammes<7;grammes++)
+        /*
+        dk1=7;
+        dk2=3;
+        dk3=5;/*/
+        for(int grammes=0; grammes<dk1;grammes++)
         {
-           for(int stiles=0; stiles<3;stiles++)
+           for(int stiles=0; stiles<dk2;stiles++)
            {    
-               for(int triti=0; triti<5;triti++)//int grammes=0; grammes<7;grammes++)
+               for(int triti=0; triti<dk3;triti++)//int grammes=0; grammes<7;grammes++)
                 {
                    // pinakas[grammes][stiles][triti]=grammes+stiles+triti;
                    // System.out.print("grammi "+grammes+"  kai stili "+stiles+" kai tin triti diastasi "+triti+"   [ "+pinakas[grammes][stiles][triti]+"]");
@@ -147,7 +170,8 @@ public class Dokimastikopj {
         }
          System.out.println("the sum based on the first dimmension is ");
          totalsum=0;
-         for(int y=0;y<7;y++){
+         
+         for(int y=0;y<dk1;y++){
          totalsum= totalsum+sum_from_line[y];
          System.out.println("the "+y+" level has sum "+sum_from_line[y]);
                  }
