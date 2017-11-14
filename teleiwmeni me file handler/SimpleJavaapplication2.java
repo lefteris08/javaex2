@@ -31,29 +31,37 @@ public class SimpleJavaapplication2 {
         
         person.setall(replaced);
        while(true){
-            System.out.println("whats your birthday");
+                       System.out.println("whats your birthday");
             replaced=input.next();//+"## 4";    
             if(replaced.contains("/" ))
             {
             String hjd[]=replaced.split("/");
-                if(hjd.length<3)
+            int c;
+                if(hjd.length<3 )
                 {
+                    System.out.println("你打错了号码");
+                
                 }
                 else
                 {
-                person.setall(hjd[0]+"## 4"); 
-                
-                person.setall(hjd[1]+"## 5");    
-         
-                person.setall(hjd[2]+"## 6");    
-         
-                person.setall(replaced+"## 7");
+                    try{
+                    Integer.valueOf(hjd[2]);
+                    Integer.valueOf(hjd[1]);
+                    Integer.valueOf(hjd[0]);
+                    person.setall(hjd[0]+"## 4");  
+                    person.setall(hjd[1]+"## 5");    
+                    person.setall(hjd[2]+"## 6");    
+                    person.setall(replaced+"## 7");
                     break;
+                }
+                catch(NumberFormatException iu){
+                System.out.println("你打错了号码");
+                }
                 }
             }
         
         
-        
+
        }       String pathapos="";
                 pathapos=System.getProperty("user.dir")+"\\"+person.getall("LastName")+"."+person.getall("FirstName")+".txt";
                
