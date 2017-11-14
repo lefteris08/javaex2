@@ -31,7 +31,7 @@ public class SimpleJavaapplication2 {
         
         person.setall(replaced);
        while(true){
-                       System.out.println("whats your birthday");
+            System.out.println("whats your birthday");
             replaced=input.next();//+"## 4";    
             if(replaced.contains("/" ))
             {
@@ -61,7 +61,7 @@ public class SimpleJavaapplication2 {
             }
         
         
-
+        
        }       String pathapos="";
                 pathapos=System.getProperty("user.dir")+"\\"+person.getall("LastName")+"."+person.getall("FirstName")+".txt";
                
@@ -102,12 +102,6 @@ public class SimpleJavaapplication2 {
             Logger.getLogger(SimpleJavaapplication2.class.getName()).log(Level.SEVERE, null, ex);
         }
       //i xrisimopoioume   fh.ekripwsi(boith);
-      //fh.ekripwsi(boith);
-      
-      int []i=new int[1] ;
-     System.out.println("auto einai "+i);
-      
-    //    int i = new int [10];
-        
+         
     }
 }
